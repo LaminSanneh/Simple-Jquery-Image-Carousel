@@ -7,12 +7,12 @@ $(document).ready(function(){
 
 		if(nextActiveImage.length == 0)
 		{
-			nextActiveImage = $(".carousel-inner img").first();
+			nextActiveImage = $(".carousel-inner a").first();
 		}
 
 		currentActiveImage.removeClass("image-shown").addClass("image-hidden").css("z-index", -10);
 		nextActiveImage.addClass("image-shown").removeClass("image-hidden").css("z-index", 20);
-		$(".carousel-inner img").not([currentActiveImage, nextActiveImage]).css("z-index", 1);
+		$(".carousel-inner a").not([currentActiveImage, nextActiveImage]).css("z-index", 1);
 
 		e.preventDefault();
 	});
@@ -24,12 +24,12 @@ $(document).ready(function(){
 
 		if(nextActiveImage.length == 0)
 		{
-			nextActiveImage = $(".carousel-inner img").last();
+			nextActiveImage = $(".carousel-inner a").last();
 		}
 
 		currentActiveImage.removeClass("image-shown").addClass("image-hidden").css("z-index",-10);
 		nextActiveImage.addClass("image-shown").removeClass("image-hidden").css("z-index", 20);
-		$(".carousel-inner img").not([currentActiveImage, nextActiveImage]).css("z-index",1);
+		$(".carousel-inner a").not([currentActiveImage, nextActiveImage]).css("z-index",1);
 
 
 		e.preventDefault();
